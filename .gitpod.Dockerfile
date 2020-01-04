@@ -1,7 +1,9 @@
 FROM gitpod/workspace-full
 
-USER gitpod
+USER root
 
-RUN sudo apt-get -qq update \
-    && sudo apt-get install -yq \
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get -qq update \
+    && apt-get install -yq \
         erlang
