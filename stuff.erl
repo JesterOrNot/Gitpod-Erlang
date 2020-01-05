@@ -1,5 +1,4 @@
 -module(main).
--export([start/0]).
 
 start() ->
     io:fwrite("~w~n", [double(4)]),
@@ -11,3 +10,9 @@ double(NUMBER) ->
 quad(A,B,C) ->
     [(-B + math:sqrt(math:pow(B,2)-4*A*C))/2*A,
       (-B - math:sqrt(math:pow(B,2)-4*A*C))/2*A].
+
+fact(1) ->
+  1;
+
+fact(N) ->
+  N * fact(n-1).
